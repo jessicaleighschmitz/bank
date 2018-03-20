@@ -16,31 +16,31 @@
   <form id="new-account">
     <div id="registration">
       <h2>Register new account:</h2>
-
         <label for="name">Name:</label>
         <input id="name" type="text" />
         <label for="initial-deposit">Initial Deposit:</label>
         <input id="initial-deposit" type="number" />
+        <button type="submit">Submit</button>
     </div>
-    <div id="manage">
+  </form>
+<div id="manage">
+  <form>
     <h2>Deposit or withdraw funds:</h2>
       <label for="deposit-amount">Deposit Amount:</label>
       <input id="deposit-amount" type="number" />
       <label for="withdraw-amount">Withdraw Amount:</label>
       <input id="withdraw-amount" type="number" />
-      <button type="submit">Submit</button>
-    </form>
-  </div>
+      <button id="manage-account" type="submit">Submit</button>
+  </form>
+</div>
 </div>
 
-<div id="balance">
+<div id="balance-container">
+  <p><span class="user-name"></span></p>
   <h3>Current Balance:</h3>
-  <p><span class="output"></span>
+  <p><span class="user-balance"></span>
 
   </p>
-  <div id="balance-container">
-
   </div>
-</div>
   </body>
 </html>
