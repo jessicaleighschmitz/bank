@@ -8,11 +8,11 @@ BankAccount.prototype.fullUser = function(){
 }
 
 BankAccount.prototype.withdraw = function(withdraw) {
-  this.amount= this.amount - withdraw;
+return this.amount= parseInt(this.amount) - withdraw;
 }
 
-BankAccount.prototype.deposit = function() {
-  this.amount= this.amount + deposit;
+BankAccount.prototype.deposit = function(deposit) {
+return  this.amount= parseInt(this.amount) + parseInt(deposit);
 }
 
 // function resetFields () {
@@ -44,7 +44,15 @@ $(document).ready(function() {
 
     var deposit = $("input#deposit-amount").val();
     console.log(deposit);
-     $("balance-container").append("<p>" + newBankAccount.deposit() + "</p>");
+
+    var newBankAccount = new BankAccount(userName, currentBalance);
+    console.log("yolo",newBankAccount)
+
+
+     $("#balance-container").append("<p>" + newBankAccount.name + ": " + newBankAccount.deposit(deposit) + "</p>");
+
+
+      $("#balance-container").append("<p>" + newBankAccount.name + ": " + newBankAccount.withdraw(withdraw) + "</p>");
     //resetFields();
     });
   });
